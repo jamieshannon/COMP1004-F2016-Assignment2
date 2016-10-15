@@ -12,6 +12,11 @@ namespace COMP1004_F2016_Assignment2
 {
     public partial class SharpAutoForm : Form
     {
+        Boolean standard = true;
+        Boolean pearlized = false;
+        Boolean customizedDetailing = false;
+        int finishChangeCounter = 0;
+
         public SharpAutoForm()
         {
             InitializeComponent();
@@ -101,6 +106,99 @@ namespace COMP1004_F2016_Assignment2
             {
                 double newCost = cost - 1741.23;
                 AdditionalOptionsTextBox.Text = newCost.ToString();
+            }
+        }
+
+        private void PearlizedRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if(PearlizedRadioButton.Checked == true)
+            {
+                double cost = Convert.ToDouble(AdditionalOptionsTextBox.Text);
+                pearlized = true;
+                finishChangeCounter++;
+                if (finishChangeCounter == 1)
+                {
+                    double newCost = cost + 345.72;
+                    AdditionalOptionsTextBox.Text = newCost.ToString();
+                    standard = false;
+                    customizedDetailing = false;
+                }
+                else
+                {
+                    if (standard == true)
+                    {
+                        double newCost = cost + 345.72;
+                        AdditionalOptionsTextBox.Text = newCost.ToString();
+                        standard = false;
+                        customizedDetailing = false;
+                    }
+                    else
+                    {
+                        double newCost = cost + 345.72 - 599.99;
+                        AdditionalOptionsTextBox.Text = newCost.ToString();
+                        standard = false;
+                        customizedDetailing = false;
+                    }
+                }
+            }
+            
+        }
+
+        private void CustomizedDetailingRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CustomizedDetailingRadioButton.Checked == true)
+            {
+                double cost = Convert.ToDouble(AdditionalOptionsTextBox.Text);
+                customizedDetailing = true;
+                finishChangeCounter++;
+                if (finishChangeCounter == 1)
+                {
+                    double newCost = cost + 599.99;
+                    AdditionalOptionsTextBox.Text = newCost.ToString();
+                    standard = false;
+                    pearlized = false;
+                }
+                else
+                {
+                    if (standard == true)
+                    {
+                        double newCost = cost + 599.99;
+                        AdditionalOptionsTextBox.Text = newCost.ToString();
+                        standard = false;
+                        pearlized = false;
+                    }
+                    else
+                    {
+                        double newCost = cost + 599.99 - 345.72;
+                        AdditionalOptionsTextBox.Text = newCost.ToString();
+                        standard = false;
+                        pearlized = false;
+                    }
+                }
+            }
+        }
+
+        private void StandardRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (StandardRadioButton.Checked == true)
+            {
+                double cost = Convert.ToDouble(AdditionalOptionsTextBox.Text);
+                standard = true;
+                finishChangeCounter++;
+                if (pearlized == true)
+                {
+                    double newCost = cost - 345.72;
+                    AdditionalOptionsTextBox.Text = newCost.ToString();
+                    pearlized = false;
+                    customizedDetailing = false;
+                }
+                else
+                {
+                    double newCost = cost - 599.99;
+                    AdditionalOptionsTextBox.Text = newCost.ToString();
+                    pearlized = false;
+                    customizedDetailing = false;
+                }
             }
         }
     }

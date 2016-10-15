@@ -248,34 +248,37 @@
             // CustomizedDetailingRadioButton
             // 
             this.CustomizedDetailingRadioButton.AutoSize = true;
-            this.CustomizedDetailingRadioButton.Location = new System.Drawing.Point(24, 72);
+            this.CustomizedDetailingRadioButton.Location = new System.Drawing.Point(24, 68);
             this.CustomizedDetailingRadioButton.Name = "CustomizedDetailingRadioButton";
             this.CustomizedDetailingRadioButton.Size = new System.Drawing.Size(123, 17);
             this.CustomizedDetailingRadioButton.TabIndex = 2;
             this.CustomizedDetailingRadioButton.Text = "Customized Detailing";
             this.CustomizedDetailingRadioButton.UseVisualStyleBackColor = true;
+            this.CustomizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this.CustomizedDetailingRadioButton_CheckedChanged);
             // 
             // PearlizedRadioButton
             // 
             this.PearlizedRadioButton.AutoSize = true;
-            this.PearlizedRadioButton.Location = new System.Drawing.Point(24, 48);
+            this.PearlizedRadioButton.Location = new System.Drawing.Point(24, 45);
             this.PearlizedRadioButton.Name = "PearlizedRadioButton";
             this.PearlizedRadioButton.Size = new System.Drawing.Size(68, 17);
             this.PearlizedRadioButton.TabIndex = 1;
             this.PearlizedRadioButton.Text = "Pearlized";
             this.PearlizedRadioButton.UseVisualStyleBackColor = true;
+            this.PearlizedRadioButton.CheckedChanged += new System.EventHandler(this.PearlizedRadioButton_CheckedChanged);
             // 
             // StandardRadioButton
             // 
             this.StandardRadioButton.AutoSize = true;
             this.StandardRadioButton.Checked = true;
-            this.StandardRadioButton.Location = new System.Drawing.Point(24, 20);
+            this.StandardRadioButton.Location = new System.Drawing.Point(24, 22);
             this.StandardRadioButton.Name = "StandardRadioButton";
             this.StandardRadioButton.Size = new System.Drawing.Size(68, 17);
             this.StandardRadioButton.TabIndex = 0;
             this.StandardRadioButton.TabStop = true;
             this.StandardRadioButton.Text = "Standard";
             this.StandardRadioButton.UseVisualStyleBackColor = true;
+            this.StandardRadioButton.CheckedChanged += new System.EventHandler(this.StandardRadioButton_CheckedChanged);
             // 
             // CalculateButton
             // 
