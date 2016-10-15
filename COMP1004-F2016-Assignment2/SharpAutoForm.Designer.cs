@@ -1,4 +1,14 @@
-﻿namespace COMP1004_F2016_Assignment2
+﻿/*
+ * App Name: Sharp Auto Form
+ * Author: Jamie Shannon
+ * Student ID: 200328763
+ * App Creation Date: October 14, 2016
+ * Description: This app takes the cost of a vehicle from the user, the tradein allowance
+ * and the desired features for the vehicle. The app then calculates the cost of the 
+ * vehicle
+ */
+
+namespace COMP1004_F2016_Assignment2
 {
     partial class SharpAutoForm
     {
@@ -75,6 +85,7 @@
             this.BasePriceTextBox.Name = "BasePriceTextBox";
             this.BasePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.BasePriceTextBox.TabIndex = 0;
+            this.BasePriceTextBox.Leave += new System.EventHandler(this.BasePriceTextBox_Leave);
             // 
             // TradeInAllowanceTextBox
             // 
@@ -83,6 +94,7 @@
             this.TradeInAllowanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.TradeInAllowanceTextBox.TabIndex = 1;
             this.TradeInAllowanceTextBox.Text = "0";
+            this.TradeInAllowanceTextBox.Leave += new System.EventHandler(this.TradeInAllowanceTextBox_Leave);
             // 
             // BasePriceLabel
             // 
@@ -288,6 +300,7 @@
             this.CalculateButton.TabIndex = 17;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ClearButton
             // 
@@ -297,6 +310,7 @@
             this.ClearButton.TabIndex = 18;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // ExitButton
             // 
@@ -306,6 +320,7 @@
             this.ExitButton.TabIndex = 19;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // FileToolStripMenuItem
             // 
@@ -320,8 +335,9 @@
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // EditToolStripMenuItem
             // 
@@ -341,6 +357,7 @@
             this.CalculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.CalculateToolStripMenuItem.Text = "Calculate";
+            this.CalculateToolStripMenuItem.Click += new System.EventHandler(this.CalculateToolStripMenuItem_Click);
             // 
             // ClearToolStripMenuItem
             // 
@@ -348,6 +365,7 @@
             this.ClearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.ClearToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.ClearToolStripMenuItem.Text = "Clear";
+            this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
             // 
             // FontToolStripMenuItem
             // 
